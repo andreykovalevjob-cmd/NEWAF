@@ -138,7 +138,7 @@ const Home = () => {
           fontFamily: '"JetBrains Mono", monospace',
           fontSize: isMobile ? 11 : 13, color: paper, letterSpacing: 0.4,
           textAlign: 'center', textTransform: 'uppercase', flexShrink: 1,
-        }}>Дарим бесплатный аудит fashion-бренда до 1 июня</span>
+        }}>Дарим бесплатный аудит fashion-бренда до 10 июня</span>
         {!isMobile && (
           <>
             <span style={{ ...monoLabel, fontSize: 10, color: '#888', flexShrink: 0 }}>

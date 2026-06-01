@@ -110,7 +110,7 @@ const HomeMobile = () => {
         <span style={{
           ...mono, fontSize: 10, color: paper, letterSpacing: 0.4,
           textAlign: 'center', flexShrink: 1, textTransform: 'uppercase',
-        }}>Бесплатный аудит до 1 июня</span>
+        }}>Бесплатный аудит до 10 июня</span>
         <a href="#contact" style={{
           ...mono, fontSize: 9, color: paper, textDecoration: 'underline',
           textUnderlineOffset: 3, flexShrink: 0,
