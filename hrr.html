@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0a0a">
+  <title>Построение команды (HR) — another fashion</title>
+  <link rel="stylesheet" href="/css/base.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel" src="/components/header.jsx"></script>
+  <script type="text/babel" src="/components/footer.jsx"></script>
+  <script src="/pages/hrr-data.js"></script>
+  <script type="text/babel" src="/pages/hrr.jsx"></script>
+  <script type="text/babel" data-presets="react">
+    ReactDOM.createRoot(document.getElementById('root')).render(<window.HrrPage />);
+  </script>
+</body>
+</html>

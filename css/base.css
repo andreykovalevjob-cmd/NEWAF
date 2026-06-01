@@ -1,0 +1,27 @@
+/* base.css — глобальные стили + подгрузка шрифтов с Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #0a0a0a;
+  color: #fafafa;
+}
+
+body {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+#root { min-height: 100vh; }
+* { box-sizing: border-box; }
+input, textarea, button, select { font-family: inherit; }
+
+/* Цветовые токены — переопределяются для разных секций при необходимости */
+:root {
+  --v2-ink:    #fafafa;
+  --v2-paper:  #0a0a0a;
+  --v2-muted:  #707070;
+  --v2-line:   #1f1f1f;
+}

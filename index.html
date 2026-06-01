@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0a0a">
+  <title>another fashion — D2C agency</title>
+  <link rel="stylesheet" href="/css/base.css">
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- React + Babel-standalone из CDN -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- Сквозные компоненты — используются на всех страницах -->
+  <script type="text/babel" src="/components/header.jsx"></script>
+  <script type="text/babel" src="/components/footer.jsx"></script>
+
+  <!-- Главная: desktop + mobile версия + роутер по ширине -->
+  <script type="text/babel" src="/pages/home-desktop.jsx"></script>
+  <script type="text/babel" src="/pages/home-mobile.jsx"></script>
+  <script type="text/babel" src="/pages/home.jsx"></script>
+
+  <!-- Монтаж -->
+  <script type="text/babel" data-presets="react">
+    ReactDOM.createRoot(document.getElementById('root')).render(<window.HomePage />);
+  </script>
+</body>
+</html>
