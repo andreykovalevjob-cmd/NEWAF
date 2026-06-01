@@ -358,7 +358,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* SELECTED WORK */}
+      {/* SELECTED WORK — 2MOOD case */}
       <section style={{
         padding: `${sectionPadY}px 0`, background: '#050505',
         borderTop: `1px solid ${line}`,
@@ -373,30 +373,82 @@ const Home = () => {
             <div style={monoLabel}>[03] selected work</div>
             <Display>Кейсы<br/>2024 — 2025.</Display>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: workCols, gap: 0 }}>
-            {works.map((w, i) => (
-              <div key={w.id} style={{ border: `1px solid ${line}` }}>
-                <image-slot
-                  {...{ id: w.id, placeholder: w.client, shape: 'rect', fit: 'cover' }}
-                  style={{ width: '100%', aspectRatio: '4 / 5', display: 'block' }}
-                />
-                <div style={{
-                  padding: isMobile ? '16px 18px' : '20px 24px',
-                  borderTop: `1px solid ${line}`,
-                  display: 'flex', justifyContent: 'space-between', alignItems: 'baseline',
-                  gap: 10,
-                }}>
-                  <div>
-                    <div style={{
-                      fontFamily: '"Archivo Black", sans-serif', fontSize: 16,
-                      textTransform: 'uppercase', letterSpacing: '-0.01em',
-                    }}>{w.client}</div>
-                    <div style={{ ...monoLabel, marginTop: 4, color: muted }}>{w.service}</div>
-                  </div>
-                  <div style={{ ...monoLabel, color: muted }}>{w.year}</div>
+
+          {/* 2MOOD кейс */}
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',
+            border: `1px solid ${line}`,
+          }}>
+            {/* Фото */}
+            <div style={{ borderRight: isMobile ? 'none' : `1px solid ${line}`, borderBottom: isMobile ? `1px solid ${line}` : 'none' }}>
+              <img
+                src="/assets/cases/2mood.jpg"
+                alt="2MOOD"
+                style={{ width: '100%', aspectRatio: '4/5', objectFit: 'cover', display: 'block' }}
+              />
+              <div style={{
+                padding: isMobile ? '16px 18px' : '20px 24px',
+                borderTop: `1px solid ${line}`,
+                display: 'flex', justifyContent: 'space-between', alignItems: 'baseline',
+              }}>
+                <div>
+                  <div style={{
+                    fontFamily: '"Archivo Black", sans-serif', fontSize: 16,
+                    textTransform: 'uppercase', letterSpacing: '-0.01em', color: ink,
+                  }}>2MOOD</div>
+                  <div style={{ ...monoLabel, marginTop: 4, color: muted }}>D2C + Performance</div>
                 </div>
+                <div style={{ ...monoLabel, color: muted }}>2019 — now</div>
               </div>
-            ))}
+            </div>
+
+            {/* Текст + метрики */}
+            <div style={{
+              padding: isMobile ? 24 : 40,
+              display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: 32,
+            }}>
+              <div>
+                <div style={{ ...monoLabel, marginBottom: 16 }}>{'// о проекте'}</div>
+                <p style={{
+                  fontFamily: '"JetBrains Mono", monospace', fontSize: isMobile ? 13 : 14,
+                  lineHeight: 1.65, color: ink, margin: '0 0 14px',
+                }}>
+                  2MOOD — омниканальный fashion-бренд, выросший из D2C-проекта в крупную розничную сеть.
+                </p>
+                <p style={{
+                  fontFamily: '"JetBrains Mono", monospace', fontSize: isMobile ? 12 : 13,
+                  lineHeight: 1.65, color: muted, margin: 0,
+                }}>
+                  С 2019 года выстраиваем и масштабируем систему performance-продвижения: от первого интернет-магазина до мобильного приложения и сети из 20+ офлайн-точек.
+                </p>
+              </div>
+
+              {/* Метрики */}
+              <div style={{
+                display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 0,
+                border: `1px solid ${line}`,
+              }}>
+                {[
+                  { v: '×10+', k: 'рост бизнеса' },
+                  { v: '×10',  k: 'рост онлайн-продаж' },
+                  { v: '20+',  k: 'офлайн-магазинов' },
+                  { v: '1',    k: 'единая система' },
+                ].map((m, i) => (
+                  <div key={i} style={{
+                    padding: isMobile ? '16px 14px' : '18px 20px',
+                    borderRight: i % 2 === 0 ? `1px solid ${line}` : 'none',
+                    borderBottom: i < 2 ? `1px solid ${line}` : 'none',
+                  }}>
+                    <div style={{
+                      fontFamily: '"Archivo Black", sans-serif', fontSize: isMobile ? 24 : 28,
+                      fontWeight: 900, color: ink, letterSpacing: '-0.03em', lineHeight: 1,
+                    }}>{m.v}</div>
+                    <div style={{ ...monoLabel, fontSize: 10, marginTop: 8 }}>{m.k}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
