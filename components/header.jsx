@@ -11,7 +11,6 @@
       { l: 'Создание контента',            h: '/content-creation' },
       { l: 'Запуск интернет-магазина',     h: '/web' },
       { l: 'Построение команды (HR)',      h: '/hrr' },
-      { l: 'Производство',                 h: 'https://anotherfashion.agency/factories2' },
     ]},
     { id: 'portfolio', l: 'портфолио',     h: 'https://anotherfashion.agency/our-portfolio' },
     { id: 'contacts',  l: 'контакты',      h: 'https://anotherfashion.agency/contact' },
