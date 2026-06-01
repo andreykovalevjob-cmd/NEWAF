@@ -35,7 +35,7 @@
     React.useEffect(() => {
       if (document.querySelector('script[src*="jivo"]')) return;
       const s = document.createElement('script');
-      s.src = '//code.jivo.ru/widget/isaZ2kUJKB';
+      s.src = '//code.jivo.ru/widget/UyB2QM983X';
       s.async = true;
       document.body.appendChild(s);
     }, []);
