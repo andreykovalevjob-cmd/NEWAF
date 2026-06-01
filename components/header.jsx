@@ -6,7 +6,6 @@
     { id: 'audit',     l: 'аудит',         h: '/audit' },
     { id: 'about',     l: 'о нас',         h: '/company' },
     { id: 'services',  l: 'услуги',        h: '/Services', dropdown: [
-      { l: 'D2C — запуск прямых продаж',      h: '/d2c' },
       { l: 'Вывод на зарубежные рынки',    h: '/worldwide' },
       { l: 'Маркетинг для fashion бренда', h: '/marketing' },
       { l: 'Создание контента',            h: '/content-creation' },
