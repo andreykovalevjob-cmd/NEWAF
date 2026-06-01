@@ -74,6 +74,6 @@ window.MARKETING = {
     title: 'Покажем, что чинить первым.',
     body: 'Оставьте контакты — соберём короткий разбор вашей текущей маркетинговой системы и предложим, с чего начать. Это часть бесплатного аудита AFA.',
     buttonLabel: 'Связаться с нами',
-    buttonHref: 'https://anotherfashion.agency/contact',
+    buttonHref: '/audit',
   },
 };

@@ -17,6 +17,22 @@ const Home = () => {
   const line = 'var(--v2-line, #1f1f1f)';
 
   const isMobile = useIsMobile(720);
+  const [form, setForm] = React.useState({ name: '', email: '', brand: '', message: '' });
+  const [status, setStatus] = React.useState('idle');
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!form.email || !form.name) return;
+    setStatus('sending');
+    try {
+      const res = await fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...form, source: '/index' }),
+      });
+      const data = await res.json();
+      setStatus(data.ok ? 'ok' : 'error');
+    } catch { setStatus('error'); }
+  };
   const isTablet = useIsMobile(1024) && !isMobile;
   const pad = isMobile ? 20 : 56;
   const sectionPadY = isMobile ? 56 : 96;
@@ -363,24 +379,35 @@ const Home = () => {
                 <div><span style={{ color: '#666' }}>tg →</span> @anotherfashion</div>
               </div>
             </div>
-            <form style={{ display: 'grid', gap: 0, alignSelf: isMobile ? 'stretch' : 'end', border: '1px solid #333' }}>
-              {['ИМЯ', 'EMAIL', 'БРЕНД / КОМПАНИЯ'].map((p, i) => (
-                <input key={i} placeholder={p} style={{
-                  padding: 18, background: 'transparent', border: 0, borderBottom: '1px solid #333',
-                  color: paper, fontSize: 12, fontFamily: '"JetBrains Mono", monospace',
-                  letterSpacing: 1, outline: 'none', width: '100%',
-                }}/>
-              ))}
-              <textarea placeholder="О ЧЁМ ПРОЕКТ" rows={4} style={{
+            <form onSubmit={handleSubmit} style={{ display: 'grid', gap: 0, alignSelf: isMobile ? 'stretch' : 'end', border: '1px solid #333' }}>
+              <input placeholder="ИМЯ" value={form.name} onChange={e => setForm(f => ({ ...f, name: e.target.value }))} style={{
+                padding: 18, background: 'transparent', border: 0, borderBottom: '1px solid #333',
+                color: paper, fontSize: 12, fontFamily: '"JetBrains Mono", monospace',
+                letterSpacing: 1, outline: 'none', width: '100%',
+              }}/>
+              <input placeholder="EMAIL" type="email" value={form.email} onChange={e => setForm(f => ({ ...f, email: e.target.value }))} style={{
+                padding: 18, background: 'transparent', border: 0, borderBottom: '1px solid #333',
+                color: paper, fontSize: 12, fontFamily: '"JetBrains Mono", monospace',
+                letterSpacing: 1, outline: 'none', width: '100%',
+              }}/>
+              <input placeholder="БРЕНД / КОМПАНИЯ" value={form.brand} onChange={e => setForm(f => ({ ...f, brand: e.target.value }))} style={{
+                padding: 18, background: 'transparent', border: 0, borderBottom: '1px solid #333',
+                color: paper, fontSize: 12, fontFamily: '"JetBrains Mono", monospace',
+                letterSpacing: 1, outline: 'none', width: '100%',
+              }}/>
+              <textarea placeholder="О ЧЁМ ПРОЕКТ" rows={4} value={form.message} onChange={e => setForm(f => ({ ...f, message: e.target.value }))} style={{
                 padding: 18, background: 'transparent', border: 0, borderBottom: '1px solid #333',
                 color: paper, fontSize: 12, fontFamily: '"JetBrains Mono", monospace',
                 letterSpacing: 1, outline: 'none', resize: 'none', width: '100%',
               }}/>
-              <button type="button" style={{
-                padding: 18, background: paper, color: ink, border: 0, fontSize: 12,
-                fontFamily: '"JetBrains Mono", monospace', textTransform: 'uppercase',
-                letterSpacing: 1.5, cursor: 'pointer', fontWeight: 600,
-              }}>[ ОТПРАВИТЬ → ]</button>
+              <button type="submit" disabled={status === 'sending' || status === 'ok'} style={{
+                padding: 18, background: status === 'ok' ? '#1a3a1a' : paper, color: status === 'ok' ? '#4caf50' : ink,
+                border: 0, fontSize: 12, fontFamily: '"JetBrains Mono", monospace',
+                textTransform: 'uppercase', letterSpacing: 1.5, cursor: status === 'sending' ? 'wait' : 'pointer',
+                fontWeight: 600,
+              }}>
+                {status === 'sending' ? '[ ОТПРАВКА... ]' : status === 'ok' ? '[ ОТПРАВЛЕНО ✓ ]' : status === 'error' ? '[ ОШИБКА — ПОПРОБУЙТЕ ЕЩЁ ]' : '[ ОТПРАВИТЬ → ]'}
+              </button>
             </form>
           </div>
         </div>

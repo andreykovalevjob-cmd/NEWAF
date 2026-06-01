@@ -4,20 +4,16 @@
 (function () {
   const NAV = [
     { id: 'audit',     l: 'аудит',         h: '/audit' },
-    { id: 'about',     l: 'о нас',         h: 'https://anotherfashion.agency/company' },
+    { id: 'about',     l: 'о нас',         h: '/company' },
     { id: 'services',  l: 'услуги',        h: '/Services', dropdown: [
       { l: 'Вывод на зарубежные рынки',    h: '/worldwide' },
       { l: 'Маркетинг для fashion бренда', h: '/marketing' },
       { l: 'Создание контента',            h: '/content-creation' },
       { l: 'Запуск интернет-магазина',     h: '/web' },
-      { l: 'Финансовое моделирование',     h: 'https://anotherfashion.agency/finance' },
       { l: 'Построение команды (HR)',      h: '/hrr' },
       { l: 'Производство',                 h: 'https://anotherfashion.agency/factories2' },
     ]},
-    { id: 'process',   l: 'как работаем',  h: 'https://anotherfashion.agency/560853106869' },
-    { id: 'cases',     l: 'кейсы',         h: 'https://anotherfashion.agency/anotherfashionschool' },
     { id: 'portfolio', l: 'портфолио',     h: 'https://anotherfashion.agency/our-portfolio' },
-    { id: 'investors', l: 'инвесторам',    h: 'https://anotherfashion.agency/new-page-2' },
     { id: 'contacts',  l: 'контакты',      h: 'https://anotherfashion.agency/contact' },
   ];
   const WHATSAPP = 'https://api.whatsapp.com/send/?phone=79895921739';
@@ -88,7 +84,7 @@
                     style={{ position: 'relative' }}
                   >
                     <a href={n.h} style={{
-                      color: 'inherit', textDecoration: active === n.id ? 'underline' : 'none',
+                      color: 'inherit', textDecoration: (active === n.id && n.id !== 'audit') ? 'underline' : 'none',
                       textUnderlineOffset: 5,
                       display: 'inline-flex', alignItems: 'center', gap: 4,
                     }}>[{n.l}]<span style={{ fontSize: 8, opacity: 0.5 }}>▾</span></a>
@@ -113,7 +109,7 @@
                 ) : (
                   <a key={i} href={n.h} style={{
                     color: 'inherit',
-                    textDecoration: active === n.id ? 'underline' : 'none',
+                    textDecoration: (active === n.id && n.id !== 'audit') ? 'underline' : 'none',
                     textUnderlineOffset: 5,
                   }}>[{n.l}]</a>
                 )

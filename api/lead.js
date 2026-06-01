@@ -1,5 +1,5 @@
 const SHEET_URL =
-  'https://script.google.com/macros/s/AKfycbyV2NCc0Hg8HoJm317cE20WDHPQkCKz86njpPNxsGA2eCmMvCh2qZJkLRAM6wIlr753Bw/exec';
+  'https://script.google.com/macros/s/AKfycbxvutDYQyCxIF0Zv2a5NiNOi_V5huvjDxDHHgxTjgP-bZwnzpNdkpS8rM4aRzsM7JcN/exec';
 
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
