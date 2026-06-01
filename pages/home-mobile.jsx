@@ -258,32 +258,54 @@ const HomeMobile = () => {
         </div>
       </section>
 
-      {/* SELECTED WORK */}
+      {/* SELECTED WORK — 2MOOD */}
       <section style={{ ...section, background: '#050505', borderTop: `1px solid ${line}` }}>
         <div style={wrap}>
           <div style={{ ...mono, fontSize: 10, color: muted, marginBottom: 16 }}>[03] selected work</div>
           <h2 style={{ ...display, fontSize: 'clamp(40px, 12vw, 64px)' }}>Кейсы<br/>2024 — 2025.</h2>
         </div>
-        <div style={{ marginTop: 28, borderTop: `1px solid ${line}` }}>
-          {works.map((w) => (
-            <div key={w.id} style={{ borderBottom: `1px solid ${line}` }}>
-              <image-slot
-                {...{ id: w.id, placeholder: w.client, shape: 'rect', fit: 'cover' }}
-                style={{ width: '100%', aspectRatio: '4 / 5', display: 'block' }}
-              />
-              <div style={{
-                ...wrap, padding: `18px ${pad}px`,
-                display: 'flex', justifyContent: 'space-between', alignItems: 'baseline',
-                gap: 12,
-              }}>
-                <div>
-                  <div style={{ ...display, fontSize: 16, letterSpacing: '-0.01em' }}>{w.client}</div>
-                  <div style={{ ...mono, fontSize: 10, color: muted, marginTop: 4 }}>{w.service}</div>
-                </div>
-                <div style={{ ...mono, fontSize: 10, color: muted }}>{w.year}</div>
-              </div>
+        <div style={{ marginTop: 28, border: `1px solid ${line}` }}>
+          {/* Фото */}
+          <img src="/assets/cases/2mood.jpg" alt="2MOOD"
+            style={{ width: '100%', aspectRatio: '4/5', objectFit: 'cover', display: 'block' }} />
+          <div style={{
+            padding: `18px ${pad}px`, borderTop: `1px solid ${line}`,
+            display: 'flex', justifyContent: 'space-between', alignItems: 'baseline',
+          }}>
+            <div>
+              <div style={{ ...display, fontSize: 16, letterSpacing: '-0.01em' }}>2MOOD</div>
+              <div style={{ ...mono, fontSize: 10, color: muted, marginTop: 4 }}>D2C + Performance</div>
             </div>
-          ))}
+            <div style={{ ...mono, fontSize: 10, color: muted }}>2019 — now</div>
+          </div>
+          {/* Текст */}
+          <div style={{ padding: `24px ${pad}px`, borderTop: `1px solid ${line}` }}>
+            <div style={{ ...mono, fontSize: 10, color: muted, marginBottom: 12 }}>{'// о проекте'}</div>
+            <p style={{ ...mono, fontSize: 13, lineHeight: 1.65, color: ink, margin: '0 0 10px' }}>
+              2MOOD — омниканальный fashion-бренд, выросший из D2C-проекта в крупную розничную сеть.
+            </p>
+            <p style={{ ...mono, fontSize: 12, lineHeight: 1.65, color: muted, margin: 0 }}>
+              С 2019 года выстраиваем систему performance-продвижения: от первого интернет-магазина до приложения и 20+ офлайн-точек.
+            </p>
+          </div>
+          {/* Метрики */}
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', borderTop: `1px solid ${line}` }}>
+            {[
+              { v: '×10+', k: 'рост бизнеса' },
+              { v: '×10',  k: 'рост онлайн-продаж' },
+              { v: '20+',  k: 'офлайн-магазинов' },
+              { v: '1',    k: 'единая система' },
+            ].map((m, i) => (
+              <div key={i} style={{
+                padding: '16px 14px',
+                borderRight: i % 2 === 0 ? `1px solid ${line}` : 'none',
+                borderBottom: i < 2 ? `1px solid ${line}` : 'none',
+              }}>
+                <div style={{ ...display, fontSize: 26, color: ink, letterSpacing: '-0.03em' }}>{m.v}</div>
+                <div style={{ ...mono, fontSize: 10, color: muted, marginTop: 6 }}>{m.k}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
