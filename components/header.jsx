@@ -82,11 +82,10 @@
                     onMouseLeave={() => setOpenDrop(null)}
                     style={{ position: 'relative' }}
                   >
-                    <a href={n.h} style={{
-                      color: 'inherit', textDecoration: (active === n.id && n.id !== 'audit') ? 'underline' : 'none',
-                      textUnderlineOffset: 5,
+                    <span style={{
+                      color: 'inherit', cursor: 'default',
                       display: 'inline-flex', alignItems: 'center', gap: 4,
-                    }}>[{n.l}]<span style={{ fontSize: 8, opacity: 0.5 }}>▾</span></a>
+                    }}>[{n.l}]<span style={{ fontSize: 8, opacity: 0.5 }}>▾</span></span>
                     {openDrop === i && (
                       <div style={{
                         position: 'absolute', top: '100%', left: -12, marginTop: 0,
