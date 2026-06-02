@@ -65,15 +65,16 @@ const ContactPage = () => {
 
   const inputStyle = {
     width: '100%',
-    background: 'transparent',
-    border: 'none',
-    borderBottom: `1px solid var(--v2-line, #1f1f1f)`,
+    background: '#141414',
+    border: '1px solid #333333',
+    borderRadius: 2,
     color: ink,
     fontFamily: '"JetBrains Mono", ui-monospace, monospace',
     fontSize: isMobile ? 14 : 15,
-    padding: '14px 0',
+    padding: '14px 16px',
     outline: 'none',
     transition: 'border-color 0.2s',
+    display: 'block',
   };
 
   const labelStyle = {
@@ -150,26 +151,24 @@ const ContactPage = () => {
               </div>
             ) : (
               <form onSubmit={handleSubmit}>
-                <label style={labelStyle}>имя *</label>
+                <label style={labelStyle}>имя</label>
                 <input
                   style={inputStyle}
                   name="name"
-                  required
                   placeholder="Ваше имя"
                   onChange={handleChange}
-                  onFocus={e => e.target.style.borderBottomColor = '#fafafa'}
-                  onBlur={e => e.target.style.borderBottomColor = '#1f1f1f'}
+                  onFocus={e => e.target.style.borderColor = '#707070'}
+                  onBlur={e => e.target.style.borderColor = '#333333'}
                 />
 
-                <label style={labelStyle}>телефон *</label>
+                <label style={labelStyle}>телефон</label>
                 <input
                   style={inputStyle}
                   name="phone"
-                  required
                   placeholder="+7 xxx xxx xx xx"
                   onChange={handleChange}
-                  onFocus={e => e.target.style.borderBottomColor = '#fafafa'}
-                  onBlur={e => e.target.style.borderBottomColor = '#1f1f1f'}
+                  onFocus={e => e.target.style.borderColor = '#707070'}
+                  onBlur={e => e.target.style.borderColor = '#333333'}
                 />
 
                 <label style={labelStyle}>email</label>
@@ -179,8 +178,8 @@ const ContactPage = () => {
                   type="email"
                   placeholder="your@email.com"
                   onChange={handleChange}
-                  onFocus={e => e.target.style.borderBottomColor = '#fafafa'}
-                  onBlur={e => e.target.style.borderBottomColor = '#1f1f1f'}
+                  onFocus={e => e.target.style.borderColor = '#707070'}
+                  onBlur={e => e.target.style.borderColor = '#333333'}
                 />
 
                 <label style={labelStyle}>бренд / компания</label>
@@ -189,8 +188,8 @@ const ContactPage = () => {
                   name="brand"
                   placeholder="Название бренда"
                   onChange={handleChange}
-                  onFocus={e => e.target.style.borderBottomColor = '#fafafa'}
-                  onBlur={e => e.target.style.borderBottomColor = '#1f1f1f'}
+                  onFocus={e => e.target.style.borderColor = '#707070'}
+                  onBlur={e => e.target.style.borderColor = '#333333'}
                 />
 
                 <label style={labelStyle}>сообщение</label>
@@ -200,8 +199,8 @@ const ContactPage = () => {
                   rows={4}
                   placeholder="Расскажите о задаче..."
                   onChange={handleChange}
-                  onFocus={e => e.target.style.borderBottomColor = '#fafafa'}
-                  onBlur={e => e.target.style.borderBottomColor = '#1f1f1f'}
+                  onFocus={e => e.target.style.borderColor = '#707070'}
+                  onBlur={e => e.target.style.borderColor = '#333333'}
                 />
 
                 <button
