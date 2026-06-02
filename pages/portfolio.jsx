@@ -85,11 +85,11 @@ const PortfolioPage = () => {
                   border: '1px solid #ebebeb',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   padding: isMobile ? '20px 16px' : '32px 24px',
-                  aspectRatio: '3/2',
+                  height: isMobile ? 140 : 200,
                 }}>
                   <img
                     src={l.src} alt={l.alt}
-                    style={{ maxWidth: '100%', maxHeight: isMobile ? 48 : 64, objectFit: 'contain', filter: 'grayscale(1)' }}
+                    style={{ maxWidth: '100%', maxHeight: isMobile ? 80 : 120, objectFit: 'contain', filter: 'grayscale(1)' }}
                   />
                 </div>
               ))}
