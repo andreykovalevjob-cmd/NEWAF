@@ -41,6 +41,8 @@ const PortfolioPage = () => {
     { src: '/assets/logos/drviki.webp',          alt: 'DR.VIKI' },
     { src: '/assets/logos/tatabronc.webp',       alt: 'TATA BRONC' },
     { src: '/assets/logos/lnfamily.webp',        alt: 'LN FAMILY' },
+    { src: '/assets/logos/ulyana-sergeenko.webp', alt: 'ULYANA SERGEENKO' },
+    { src: '/assets/logos/azi.webp',               alt: 'AZI' },
   ];
 
   const mono = { fontFamily: '"JetBrains Mono", ui-monospace, monospace', fontSize: 11, letterSpacing: 1, textTransform: 'uppercase' };

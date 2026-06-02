@@ -53,6 +53,8 @@ const HomeMobile = () => {
     { src: 'assets/logos/awake.webp',          alt: 'A.W.A.K.E. MODE' },
     { src: 'assets/logos/davidkoma.webp',      alt: 'DAVID KOMA' },
     { src: 'assets/logos/lnfamily.webp',       alt: 'LN FAMILY' },
+    { src: 'assets/logos/ulyana-sergeenko.webp', alt: 'ULYANA SERGEENKO' },
+    { src: 'assets/logos/azi.webp',              alt: 'AZI' },
     { src: 'assets/logos/namelazz.webp',       alt: 'NAMELAZZ' },
     { src: 'assets/logos/kalmanovich.webp',    alt: 'KALMANOVICH' },
     { src: 'assets/logos/tatabronc.webp',      alt: 'TATABRONC' },
