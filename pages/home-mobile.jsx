@@ -110,7 +110,7 @@ const HomeMobile = () => {
         <span style={{
           ...mono, fontSize: 10, color: paper, letterSpacing: 0.4,
           textAlign: 'center', flexShrink: 1, textTransform: 'uppercase',
-        }}>Бесплатный аудит до 1 июня</span>
+        }}>Бесплатный аудит до 10 июня</span>
         <a href="#contact" style={{
           ...mono, fontSize: 9, color: paper, textDecoration: 'underline',
           textUnderlineOffset: 3, flexShrink: 0,
@@ -267,7 +267,7 @@ const HomeMobile = () => {
         <div style={{ marginTop: 28, border: `1px solid ${line}` }}>
           {/* Фото */}
           <img src="/assets/cases/2mood.jpg" alt="2MOOD"
-            style={{ width: '100%', aspectRatio: '4/5', objectFit: 'cover', display: 'block' }} />
+            style={{ width: '100%', aspectRatio: '3/2', objectFit: 'cover', display: 'block' }} />
           <div style={{
             padding: `18px ${pad}px`, borderTop: `1px solid ${line}`,
             display: 'flex', justifyContent: 'space-between', alignItems: 'baseline',
@@ -282,10 +282,10 @@ const HomeMobile = () => {
           <div style={{ padding: `24px ${pad}px`, borderTop: `1px solid ${line}` }}>
             <div style={{ ...mono, fontSize: 10, color: muted, marginBottom: 12 }}>{'// о проекте'}</div>
             <p style={{ ...mono, fontSize: 13, lineHeight: 1.65, color: ink, margin: '0 0 10px' }}>
-              2MOOD — омниканальный fashion-бренд, выросший из D2C-проекта в крупную розничную сеть.
+              2MOOD — омниканальный fashion-бренд, выросший из D2C-проекта в крупную розничную сеть. Команда 2MOOD обратилась к Another Fashion на этапе запуска онлайн-продаж.
             </p>
             <p style={{ ...mono, fontSize: 12, lineHeight: 1.65, color: muted, margin: 0 }}>
-              С 2019 года выстраиваем систему performance-продвижения: от первого интернет-магазина до приложения и 20+ офлайн-точек.
+              С 2019 года мы выстраиваем и масштабируем систему performance-продвижения бренда: от первого интернет-магазина до мобильного приложения и сети из более чем 20 офлайн-точек. Сегодня маркетинг 2MOOD — это управляемая машина роста, соединяющая онлайн, офлайн и CRM в единую экосистему.
             </p>
           </div>
           {/* Метрики */}

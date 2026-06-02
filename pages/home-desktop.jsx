@@ -138,7 +138,7 @@ const Home = () => {
           fontFamily: '"JetBrains Mono", monospace',
           fontSize: isMobile ? 11 : 13, color: paper, letterSpacing: 0.4,
           textAlign: 'center', textTransform: 'uppercase', flexShrink: 1,
-        }}>Дарим бесплатный аудит fashion-бренда до 1 июня</span>
+        }}>Дарим бесплатный аудит fashion-бренда до 10 июня</span>
         {!isMobile && (
           <>
             <span style={{ ...monoLabel, fontSize: 10, color: '#888', flexShrink: 0 }}>
@@ -414,13 +414,13 @@ const Home = () => {
                   fontFamily: '"JetBrains Mono", monospace', fontSize: isMobile ? 13 : 14,
                   lineHeight: 1.65, color: ink, margin: '0 0 14px',
                 }}>
-                  2MOOD — омниканальный fashion-бренд, выросший из D2C-проекта в крупную розничную сеть.
+                  2MOOD — омниканальный fashion-бренд, выросший из D2C-проекта в крупную розничную сеть. Команда 2MOOD обратилась к Another Fashion на этапе запуска онлайн-продаж.
                 </p>
                 <p style={{
                   fontFamily: '"JetBrains Mono", monospace', fontSize: isMobile ? 12 : 13,
                   lineHeight: 1.65, color: muted, margin: 0,
                 }}>
-                  С 2019 года выстраиваем и масштабируем систему performance-продвижения: от первого интернет-магазина до мобильного приложения и сети из 20+ офлайн-точек.
+                  С 2019 года мы выстраиваем и масштабируем систему performance-продвижения бренда: от первого интернет-магазина до мобильного приложения и сети из более чем 20 офлайн-точек. Сегодня маркетинг 2MOOD — это управляемая машина роста, соединяющая онлайн, офлайн и CRM в единую экосистему.
                 </p>
               </div>
 
