@@ -53,32 +53,12 @@
 
     return (
       <React.Fragment>
-        {/* ANNOUNCE BAR */}
-        <div style={{
-          width: '100%', background: ink, color: paper,
-          fontFamily: '"JetBrains Mono", ui-monospace, monospace',
-          fontSize: isMobile ? 11 : 12, letterSpacing: 1,
-          textTransform: 'uppercase', textAlign: 'center',
-          padding: isMobile ? '10px 16px' : '10px 24px',
-          position: 'sticky', top: 0, zIndex: 61,
-          display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 16,
-        }}>
-          <span>Бесплатный аудит fashion-бренда до 10 июня · осталось мест: 4</span>
-          <a href="/contact" style={{
-            color: paper, background: 'transparent',
-            border: '1px solid rgba(10,10,10,0.4)',
-            padding: '4px 12px', textDecoration: 'none',
-            fontFamily: '"JetBrains Mono", monospace',
-            fontSize: 10, letterSpacing: 1, textTransform: 'uppercase',
-            whiteSpace: 'nowrap',
-          }}>[ получить → ]</a>
-        </div>
         <header style={{
           width: '100%', maxWidth: 1600, margin: '0 auto',
           padding: `${isMobile ? 16 : 22}px ${pad}px`,
           display: 'flex', justifyContent: 'space-between', alignItems: 'center',
           borderBottom: `1px solid ${line}`, gap: 16, background: paper,
-          position: 'sticky', top: isMobile ? 37 : 37, zIndex: 60,
+          position: 'sticky', top: 0, zIndex: 60,
         }}>
           <div style={{ display: 'flex', alignItems: 'baseline', gap: 10 }}>
             <a href="/" style={{
@@ -163,7 +143,7 @@
             <div style={{
               padding: `16px ${pad}px`, borderBottom: `1px solid ${line}`,
               display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-              position: 'sticky', top: 37, background: paper,
+              position: 'sticky', top: 0, background: paper,
             }}>
               <div style={{ ...display, fontSize: 17, textTransform: 'lowercase', letterSpacing: '-0.04em', color: ink }}>
                 another fashion.
@@ -228,6 +208,25 @@
             </div>
           </div>
         )}
+        {/* ANNOUNCE BAR — под меню */}
+        <div style={{
+          background: '#111', color: ink,
+          fontFamily: '"JetBrains Mono", ui-monospace, monospace',
+          fontSize: isMobile ? 10 : 11, letterSpacing: 1,
+          textTransform: 'uppercase', textAlign: 'center',
+          padding: isMobile ? '9px 16px' : '9px 24px',
+          borderBottom: `1px solid ${line}`,
+          display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 14,
+        }}>
+          <span style={{ color: muted }}>Бесплатный аудит до 10 июня · осталось мест: 4</span>
+          <a href="/contact" style={{
+            color: ink, textDecoration: 'none',
+            fontFamily: '"JetBrains Mono", monospace',
+            fontSize: isMobile ? 10 : 11, letterSpacing: 1,
+            borderBottom: '1px solid #555', paddingBottom: 1,
+            whiteSpace: 'nowrap',
+          }}>[ получить → ]</a>
+        </div>
       </React.Fragment>
     );
   };
