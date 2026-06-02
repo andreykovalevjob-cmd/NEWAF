@@ -124,40 +124,6 @@ const Home = () => {
       fontFamily: '"JetBrains Mono", ui-monospace, monospace',
       overflowX: 'hidden',
     }}>
-      {/* ANNOUNCEMENT BAR */}
-      <div style={{
-        background: ink, color: paper, padding: `${isMobile ? 9 : 11}px ${pad}px`,
-        display: 'flex', alignItems: 'center', justifyContent: 'center',
-        gap: isMobile ? 10 : 18, borderBottom: `1px solid ${ink}`,
-      }}>
-        <span style={{
-          width: isMobile ? 6 : 7, height: isMobile ? 6 : 7, borderRadius: '50%',
-          background: paper, flexShrink: 0,
-        }} />
-        <span style={{
-          fontFamily: '"JetBrains Mono", monospace',
-          fontSize: isMobile ? 11 : 13, color: paper, letterSpacing: 0.4,
-          textAlign: 'center', textTransform: 'uppercase', flexShrink: 1,
-        }}>Дарим бесплатный аудит fashion-бренда до 10 июня</span>
-        {!isMobile && (
-          <>
-            <span style={{ ...monoLabel, fontSize: 10, color: '#888', flexShrink: 0 }}>
-              · осталось мест: 4
-            </span>
-            <a href="#contact" style={{
-              ...monoLabel, fontSize: 10, color: paper, textDecoration: 'underline',
-              textUnderlineOffset: 4, flexShrink: 0, marginLeft: 4,
-            }}>[ получить → ]</a>
-          </>
-        )}
-        {isMobile && (
-          <a href="#contact" style={{
-            ...monoLabel, fontSize: 9, color: paper, textDecoration: 'underline',
-            textUnderlineOffset: 3, flexShrink: 0,
-          }}>[ получить → ]</a>
-        )}
-      </div>
-
 
       {/* HERO */}
       <section style={{ ...wrap, padding: `${isMobile ? 40 : 64}px ${pad}px ${isMobile ? 56 : 80}px` }}>

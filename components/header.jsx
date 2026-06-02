@@ -210,20 +210,20 @@
         )}
         {/* ANNOUNCE BAR — под меню */}
         <div style={{
-          background: '#111', color: ink,
+          background: '#f5f5f0', color: '#0a0a0a',
           fontFamily: '"JetBrains Mono", ui-monospace, monospace',
           fontSize: isMobile ? 10 : 11, letterSpacing: 1,
           textTransform: 'uppercase', textAlign: 'center',
           padding: isMobile ? '9px 16px' : '9px 24px',
-          borderBottom: `1px solid ${line}`,
+          borderBottom: '1px solid #e0e0e0',
           display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 14,
         }}>
-          <span style={{ color: muted }}>Бесплатный аудит до 10 июня · осталось мест: 4</span>
+          <span style={{ color: '#555' }}>Бесплатный аудит до 10 июня · осталось мест: 4</span>
           <a href="/contact" style={{
-            color: ink, textDecoration: 'none',
+            color: '#0a0a0a', textDecoration: 'none',
             fontFamily: '"JetBrains Mono", monospace',
             fontSize: isMobile ? 10 : 11, letterSpacing: 1,
-            borderBottom: '1px solid #555', paddingBottom: 1,
+            borderBottom: '1px solid #999', paddingBottom: 1,
             whiteSpace: 'nowrap',
           }}>[ получить → ]</a>
         </div>

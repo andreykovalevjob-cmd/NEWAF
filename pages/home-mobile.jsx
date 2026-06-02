@@ -100,25 +100,6 @@ const HomeMobile = () => {
       minHeight: '100vh',
       position: 'relative',
     }}>
-      {/* ANNOUNCEMENT BAR */}
-      <div style={{
-        background: ink, color: paper, padding: `9px ${pad}px`,
-        display: 'flex', alignItems: 'center', justifyContent: 'center',
-        gap: 10, borderBottom: `1px solid ${ink}`,
-      }}>
-        <span style={{
-          width: 6, height: 6, borderRadius: '50%', background: paper, flexShrink: 0,
-        }} />
-        <span style={{
-          ...mono, fontSize: 10, color: paper, letterSpacing: 0.4,
-          textAlign: 'center', flexShrink: 1, textTransform: 'uppercase',
-        }}>Бесплатный аудит до 10 июня</span>
-        <a href="#contact" style={{
-          ...mono, fontSize: 9, color: paper, textDecoration: 'underline',
-          textUnderlineOffset: 3, flexShrink: 0,
-        }}>[ получить → ]</a>
-      </div>
-
       {/* HEADER */}
 
       {/* HERO */}
