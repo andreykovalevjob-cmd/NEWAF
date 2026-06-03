@@ -796,7 +796,7 @@ const MarketingPage = () => {
                 textTransform: 'uppercase', letterSpacing: 1.5, fontWeight: 600,
                 textDecoration: 'none', border: `1px solid ${paper}`,
               }}>[ {M.cta.buttonLabel} → ]</a>
-              <a href="/audit" style={{
+              <a href="/audit.html" style={{
                 padding: '16px 28px', color: paper,
                 fontSize: 12, fontFamily: '"JetBrains Mono", monospace',
                 textTransform: 'uppercase', letterSpacing: 1.5,

@@ -68,7 +68,7 @@ const Home = () => {
   const [menuOpen, setMenuOpen] = React.useState(false);
 
   const navLinks = [
-    { label: '[аудит]', href: '/audit' },
+    { label: '[аудит]', href: '/audit.html' },
     { label: '[о нас]', href: '/about' },
     { label: '[услуги]', href: '/services' },
     { label: '[оставить заявку]', href: '#contact' },
@@ -92,7 +92,7 @@ const Home = () => {
         fontFamily: '"JetBrains Mono", monospace', fontSize: 12, letterSpacing: 0.5,
       }}>
         ДЛЯ ЗАПИСИ НА ЭКСПРЕСС АУДИТ ОСТАВЬТЕ ЗАЯВКУ{' '}
-        <a href="/audit#audit-form" style={{ color: paper, fontWeight: 700, textDecoration: 'underline' }}>ТУТ</a>
+        <a href="/audit.html#audit-form" style={{ color: paper, fontWeight: 700, textDecoration: 'underline' }}>ТУТ</a>
         <button onClick={() => {}} style={{
           position: 'absolute', right: 16, top: '50%', transform: 'translateY(-50%)',
           background: 'transparent', border: 'none', color: paper, fontSize: 18, cursor: 'pointer',

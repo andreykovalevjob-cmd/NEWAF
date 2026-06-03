@@ -110,13 +110,13 @@ const PortfolioPage = () => {
               textTransform: 'lowercase', color: paper,
             }}>ваш бренд<br/>следующий.</h2>
             <div style={{ marginTop: isMobile ? 28 : 40, display: 'flex', gap: 14, flexWrap: 'wrap' }}>
-              <a href="/audit" style={{
+              <a href="/audit.html" style={{
                 padding: '16px 28px', background: paper, color: ink,
                 fontFamily: '"JetBrains Mono", monospace', fontSize: 12,
                 textTransform: 'uppercase', letterSpacing: 1.5, fontWeight: 600,
                 textDecoration: 'none', border: `1px solid ${paper}`,
               }}>[ получить аудит → ]</a>
-              <a href="/contact" style={{
+              <a href="/contact.html" style={{
                 padding: '16px 28px', color: paper,
                 fontFamily: '"JetBrains Mono", monospace', fontSize: 12,
                 textTransform: 'uppercase', letterSpacing: 1.5,
