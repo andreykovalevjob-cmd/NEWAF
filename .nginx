@@ -1,0 +1,10 @@
+location / {
+    try_files $uri $uri.html $uri/ /index.html;
+}
+
+location /api/ {
+    proxy_pass https://new-affa-mac.vercel.app/api/;
+    proxy_set_header Host new-affa-mac.vercel.app;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_ssl_server_name on;
+}
