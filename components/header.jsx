@@ -3,16 +3,16 @@
 
 (function () {
   const NAV = [
-    { id: 'audit',     l: 'аудит',         h: '/audit.html' },
-    { id: 'about',     l: 'о нас',         h: '/company.html' },
+    { id: 'audit',     l: 'аудит',         h: '/audit' },
+    { id: 'about',     l: 'о нас',         h: '/company' },
     { id: 'services',  l: 'услуги',        h: '/Services', dropdown: [
-      { l: 'Вывод на зарубежные рынки',    h: '/worldwide.html' },
-      { l: 'Маркетинг для fashion бренда', h: '/marketing.html' },
-      { l: 'Создание контента',            h: '/content-creation.html' },
-      { l: 'Запуск интернет-магазина',     h: '/web.html' },
-      { l: 'Построение команды (HR)',      h: '/hrr.html' },
+      { l: 'Вывод на зарубежные рынки',    h: '/worldwide' },
+      { l: 'Маркетинг для fashion бренда', h: '/marketing' },
+      { l: 'Создание контента',            h: '/content-creation' },
+      { l: 'Запуск интернет-магазина',     h: '/web' },
+      { l: 'Построение команды (HR)',      h: '/hrr' },
     ]},
-    { id: 'portfolio', l: 'портфолио',     h: '/portfolio.html' },
+    { id: 'portfolio', l: 'портфолио',     h: '/portfolio' },
     { id: 'contacts',  l: 'контакты',      h: 'https://anotherfashion.agency/contact' },
   ];
   const WHATSAPP = 'https://api.whatsapp.com/send/?phone=79895921739';
@@ -218,7 +218,7 @@
           display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 14,
         }}>
           <span style={{ color: '#555' }}>Бесплатный аудит до 10 июня · осталось мест: 4</span>
-          <a href="/contact.html" style={{
+          <a href="/contact" style={{
             color: '#0a0a0a', textDecoration: 'none',
             fontFamily: '"JetBrains Mono", monospace',
             fontSize: isMobile ? 10 : 11, letterSpacing: 1,

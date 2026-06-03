@@ -68,7 +68,7 @@ const Home = () => {
   const [menuOpen, setMenuOpen] = React.useState(false);
 
   const navLinks = [
-    { label: '[аудит]', href: '/audit.html' },
+    { label: '[аудит]', href: '/audit' },
     { label: '[о нас]', href: '/about' },
     { label: '[услуги]', href: '/services' },
     { label: '[оставить заявку]', href: '#contact' },

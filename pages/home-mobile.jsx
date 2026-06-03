@@ -124,7 +124,7 @@ const HomeMobile = () => {
             letterSpacing: 1.5, textDecoration: 'none', textAlign: 'center',
             border: `1px solid ${ink}`,
           }}>[ начать проект → ]</a>
-          <a href="index.html" style={{
+          <a href="index" style={{
             ...mono, fontSize: 11, padding: '14px 22px',
             color: ink, border: `1px solid ${line}`,
             letterSpacing: 1.5, textDecoration: 'none', textAlign: 'center',

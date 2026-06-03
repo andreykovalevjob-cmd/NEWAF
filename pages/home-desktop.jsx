@@ -164,7 +164,7 @@ const Home = () => {
               letterSpacing: 1.5, fontWeight: 600, textDecoration: 'none',
               textAlign: 'center',
             }}>[ начать проект → ]</a>
-            <a href="index.html" style={{
+            <a href="index" style={{
               padding: '12px 22px', color: ink, border: `1px solid ${line}`,
               fontSize: 11, fontFamily: '"JetBrains Mono", monospace',
               textTransform: 'uppercase', letterSpacing: 1.5, textDecoration: 'none',
